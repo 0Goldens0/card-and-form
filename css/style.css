@@ -91,6 +91,7 @@
     background: gold;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
   }
 
   .putName.error,

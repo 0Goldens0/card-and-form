@@ -22,21 +22,33 @@ validation.addField('#name', [
 
 ])
 
-.addField("#phone", [
+validation.addField('#phone', [
   {
-    validator: (value) => {
-      const phone = selector.inputmask.unmaskedvalue()
-      return Boolean(Number(phone) && phone.lenght > 0)
-    },
+    rule: 'required',
     errorMessage : 'Вы не ввели телефон'
   },
+
   {
-    validator: (value) => {
-      const phone = selector.inputmask.unmaskedvalue()
-      return Boolean(Number(phone) && phone.lenght === 10)
-    },
-    errorMessage : 'Телефон должен состоять из 10 символов'
+    rule: 'minLength',
+    value: 4,
+    errorMessage : 'Необходимо ввести 10 символов'
   }
 
 ])
+
+
+
+
+// .addField("#phone", [
+//   {
+//     validator: () => {
+//       const phone = selector.inputmask.unmaskedvalue();
+//       const result = Number(phone) && phone.lenght === 10;
+//       return result === 0 ? false : result;
+//     },
+//     errorMessage : 'Телефон должен состоять из 10 символов'
+//   },
+// ])
+
+
 
