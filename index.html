@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Карточки</title>
+  <link rel="stylesheet" href="/css/remodal-default-theme.css">
+  <link rel="stylesheet" href="/css/remodal.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main>
+    <section class="cards">
+      <div class="container">
+        <h1 class="cards__heading">Телефоны</h1>
+        <ul class="cards__list">
+          <li class="cards__item">
+            <img class="cards__img" src="/img/lg.jpg" alt="LG">
+            <div class="card__item-container">
+              <h2 class="cards__item-heading" id="lg">LG Magna DualSim мобильный телефон</h2>
+              <p class="price">6 879 р.</p>
+              <h3 class="heding-description">Описание</h3>
+              <p class="cards__item-description">
+                Компания LG представляет мобильный телефон LG Magna DualSim. Основные характеристики: тип устройства смартфон, стандарты связи GSM / 3G, а также операционная система Android v 5.0 и слоты для карт 2 SIM. Доставка и самовывоз товара «LG Magna DualSim» . Перед тем, как купить прочитайте отзывы и посмотрите характеристики.
+              </p>
+              <a class="btn" id="btn-lg" href="#modal">Купить</a>
+            </div>            
+          </li>
+          <li class="cards__item">
+            <img class="cards__img" src="/img/philips.jpg" alt="LG">
+            <div class="card__item-container">
+              <h2 class="cards__item-heading" id="phlips">Сотовый телефон Philips Xenium E255, красный</h2>
+              <p class="price">3 190 р.</p>
+              <h3 class="heding-description">Описание</h3>
+              <p class="cards__item-description">
+                Имеющий привлекательную стоимость мобильный телефон PHILIPS Xenium E255 отличается и другими плюсами. Он выполнен в формате раскладушки, поэтому не займет много места в сложенном состоянии. Здесь реализована одновременная работа сразу двух SIM-карт. Диагональ TFT-дисплея равна 2.4 дюйма, а его разрешение составляет 320х240 пикселей. За оптимальную производительность отвечает одноядерный процессор MediaTek MT6261D.              </p>
+              <a class="btn" id="btn-phil" href="#modal">Купить</a>
+            </div> 
+          </li>
+          <li class="cards__item">
+            <img class="cards__img" src="/img/sony.jpg" alt="LG">
+            <div class="card__item-container">
+              <h2 class="cards__item-heading" id="sony">Sony Xperia ZL мобильный телефон</h2>
+              <p class="price">7 441 р.</p>
+              <h3 class="heding-description">Описание</h3>
+              <p class="cards__item-description">
+                Компания Sony представляет мобильный телефон Sony Xperia ZL. Основные характеристики: цвет черный, тип устройства смартфон, а также стандарты связи GSM / 3G / 4G (LTE) и операционная система Android. Доставка и самовывоз товара «Sony Xperia ZL» в Гай. Перед тем, как купить в Гай прочитайте отзывы и посмотрите характеристики.              </p>
+              <a class="btn" id="btn-sony" href="#modal">Купить</a>
+            </div> 
+          </li>
+          <li class="cards__item">
+            <img class="cards__img" src="/img/xiaomi.jpg" alt="LG">
+            <div class="card__item-container">
+              <h2 class="cards__item-heading" id="xiaomi">XIAOMI MI 6Xн</h2>
+              <p class="price">13 898 р.</p>
+              <h3 class="heding-description">Описание</h3>
+              <p class="cards__item-description">
+                Xiaomi Mi 6X — производительный смартфон среднего класса. Устройство заполучило «умные» камеры, а также современный безрамочный дизайн. Презентация гаджета состоялась в апреле 2018 года.              </p>
+              <a class="btn" id="btn-xia" href="#modal">Купить</a>
+            </div> 
+          </li>
+        </ul>
+      </div>
+
+      <div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+         <div class="remodalBorder">      
+          <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+            <form action="#" id="form" autocomplete="off">
+              <h2 id="modal1Title">Оставьте ваши контактные данные и наш консультант свяжется с вами</h2>
+              <input
+                type="text"
+                class="putName form__input form-control"
+                autocomplete="off"
+                id="name"
+                name="name"
+                placeholder="Ваше ваше имя"
+                >
+
+              <input
+                name="tel"
+                id="phone"
+                type="tel"
+                class="putPhone form__input form-contro"
+                placeholder="Введите номер телефона"
+                >
+
+              <input
+                type="text"
+                class="product-name"
+                name="productName"
+                id="pn">
+
+              <button class="btn btn-primary" id="submit-btn" type="submit">Заказать</button>
+
+
+              <!-- <input
+                type="submit"
+                name="submit"
+                class="btn btn-primary"
+                id="submit-btn"
+                value="ОТПРАВИТЬ"> -->
+
+              <input
+                type="hidden"
+                name="formData"
+                value="Заявка с сайта">
+
+            </form>   
+        </div>   
+      </div>
+    </section>
+  </main>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="/js/remodal.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="/js/inputmask.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
